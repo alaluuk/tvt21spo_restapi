@@ -7,6 +7,8 @@ const dotenv = require('dotenv');
 
 var bookRouter = require('./routes/book');
 var studentRouter = require('./routes/student');
+var userRouter = require('./routes/user');
+var loginRouter = require('./routes/login');
 
 var app = express();
 
@@ -33,5 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/book', bookRouter);
 app.use('/student', studentRouter);
+app.use('/user', userRouter);
+app.use('/login', loginRouter);
 
 module.exports = app;
